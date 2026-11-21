@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Koi Pond — Spot the Difference</title>
+<link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+<header class="topbar">
+  <h1>Koi Pond <span>· Spot the Difference</span></h1>
+  <div class="hud">
+    <span id="round-label">Round 1 of 3</span>
+    <span id="counter">Found 0 / 7</span>
+    <span id="score">Score 0</span>
+    <span id="timer">02:00</span>
+    <span id="hints">Hints 3 (H)</span>
+  </div>
+</header>
+<p id="scene-intro" class="intro"></p>
+<main class="boards">
+  <figure class="panel">
+    <figcaption>Left picture</figcaption>
+    <canvas id="panel-left" width="600" height="440"></canvas>
+  </figure>
+  <figure class="panel">
+    <figcaption>Right picture</figcaption>
+    <canvas id="panel-right" width="600" height="440"></canvas>
+  </figure>
+</main>
+<div class="controls">
+  <button id="hint-btn" type="button">Hint (H) −25</button>
+  <button id="restart-btn" type="button">Restart round (R)</button>
+  <button id="next-btn" type="button">Next (Enter)</button>
+  <button id="mute-btn" type="button">Sound on</button>
+</div>
+<p class="help">Click a difference on either picture to ring it. Seven differences hide in every round — three rounds, three scenes, two minutes each. Wrong clicks cost 10 points.</p>
+<div id="overlay" class="overlay hidden">
+  <div class="card">
+    <h2 id="overlay-title">Round clear!</h2>
+    <p id="overlay-text"></p>
+  </div>
+</div>
+<div id="victory" class="overlay hidden">
+  <div class="card">
+    <h2>All three rounds clear!</h2>
+    <p id="final-stars">★★★</p>
+    <p id="final-score">Final score: 0</p>
+    <p>You found every difference in the koi pond, the bookshop and the tea house. Press R to play again.</p>
+  </div>
+</div>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
